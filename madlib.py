@@ -1,6 +1,5 @@
 day = input("What day is it? Remember to type in Quotes")
 str(day)
-print name
 
 sunny = input("Is it daytime? (Yes/No) Remember to type in Quotes")
 str(sunny)
