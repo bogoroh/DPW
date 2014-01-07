@@ -15,10 +15,10 @@ else:
 #Casino Game
 casinoGame = ["Poker","Roulette","Blackjack","Slots","Craps"]
     
-    
+#Bartender 
+bartender = {"Vanessa":"1800 Silver Dog","Britney":"Abbot's Dream","Jessica":"Apple Daiquiri","Nicole":"Bangkok Bomb"}
 
-
-message = '''{opening} {day}. The ducks were swimmming and it looked like a nomal day at work for {name}. After work {name} was walking to his car and found a wallet with ${money} in it. {name} Decided to go the casino and try his luck with the money he found   '''
+message = '''{opening} {day}. The ducks were swimmming and it looked like a nomal day at work for {name}. After work {name} was walking to his car and found a wallet with ${money} in it. {name} Decided to go the casino and try his luck with the money he found. When he arrived at the casino he got greeted by his favorite bartender vanessa with her favorite drink called bartender["Vannessa"]   '''
 messageFormatted = message.format(**locals())
 
-print messageFormatted
+#print messageFormatted
