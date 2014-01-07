@@ -1,8 +1,8 @@
-name = raw_input("What is your name? Remember to type in Quotes") #String
-day = raw_input("What day is it? Remember to type in Quotes") #String
-sunny = raw_input("Is it sunny? (Yes/No) Remember to type in Quotes") #String
+name = raw_input("What is your name? ") #String
+day = raw_input("What day is it? ") #String
+sunny = raw_input("Is it sunny? (Yes/No) ") #String
 currency = float(raw_input("What is the current currency of Euro to US Dollar? (Hint=1.36) ")) #Float 
-money = int(raw_input("How much money did he find? Please fill in a whole number in Euros")) #Number
+money = int(raw_input("How much money did he find? Please fill in a whole number in Euros ")) #Number
 
 #Ammount he found in US Dollar
 dollar = money * currency
