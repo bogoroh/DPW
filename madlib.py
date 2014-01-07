@@ -13,6 +13,10 @@ if sunny == "Yes":
 else:
     opening = "It's a grimy"
     
+#Casino Game
+casinoGame = ["Poker","Roulette","Blackjack","Slots","Craps"]
+    
+    
 print opening
 
 '''{opening} {day}. The ducks were swimmming and it looked like a nomal day at work for {name}.  ''' 
