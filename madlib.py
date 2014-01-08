@@ -46,6 +46,15 @@ elif dice == 4:
 else:
     diceMoney = "he won 500$"
 
+#first function
+def bankBalance():
+    balance = 6000
+    earnings = 1200
+    balance += earnings
+    return balance
+
+bankF =  bankBalance()
+
 message = '''{opening} {day}. The ducks were swimming and it looked like a nomal day at work for {name}. After work {name} was walking to his car and found a wallet with {money} Euro in it. The following day he went to the bank and converted his Euros into dollars with the rate of {currency} per Euro. {name} got {dollar} out of it and decided to go the casino and try his luck with the money he found. When he arrived at the casino he got greeted by his favorite bartender Vanessa with her favorite drink called: {bartenderDrink}. He was also the 10000th player to enter the casino that game and was allowed to throw a dice to see if he won a bonus. He threw the dice and {diceMoney}. He made his way to the {casinoGame} room and decided to try his luck there. It was getting close to new year so he decided to go outside and see the fireworks. He looked at the clock and saw there was only 10 minutes remaining for New year. He kept looking down at his clock counting down. '''
 messageFormatted = message.format(**locals())
 
@@ -56,3 +65,9 @@ for countDown in reversed([0,1,2,3,4,5,6,7,9,10]): # Loop reversing the countdow
     print timeNewYear
     if countDown == 0:
         newYear = "Happy new year !!!"
+        
+message2 = '''The next morning when he woke up with so much money he had to go the bank and deposit some of it. So he did that and wanted to see how much money he still had on his account. His receipt gave him {bankF} '''
+messageFormatted2 = message2.format(**locals())
+
+
+print messageFormatted2
