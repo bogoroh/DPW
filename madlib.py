@@ -66,7 +66,7 @@ netto = bankF * taxPercent #Money he is left with after taxes
 
 #Second function
 def temperature(celcius):
-    fahrenheit = 9.0 / 5.0 * celcius + 32
+    fahrenheit = 9.0 / 5.0 * celcius + 32 # Mathematical operator
     return fahrenheit #Number in fahrenheit
 
 # Variable for the temperature converter
@@ -76,7 +76,7 @@ message = '''{opening} {day} with a temperature of {temperatureF} degrees Fahren
 messageFormatted = message.format(**locals())
 
 print messageFormatted
-for countDown in reversed([0,1,2,3,4,5,6,7,9,10]): # Loop reversing the countdown till new year
+for countDown in reversed([0,1,2,3,4,5,6,7,9,10]): # Loop reversing the countdown in the array till new year 
     timeNewYear = countDown, "Minutes left till new year"
     print timeNewYear # countdown timer till new year
     if countDown == 0:
@@ -84,6 +84,5 @@ for countDown in reversed([0,1,2,3,4,5,6,7,9,10]): # Loop reversing the countdow
         print newYear
 message2 = '''He celebrated with some chapagne and a dance with his favorite bartender and decided to take a cab back home since it got pretty late. The next morning when he woke up with so much money he had to go the bank and deposit some of it. So he did that and wanted to see how much money he still had on his account. His receipt gave him {bankF}. He had to withdraw all that money to pay his taxes. For this year he had to pay {tax}% of his total bankroll on taxes. Leaving him with {netto}$.   '''
 messageFormatted2 = message2.format(**locals())
-
 
 print messageFormatted2
