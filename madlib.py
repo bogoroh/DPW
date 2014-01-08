@@ -6,7 +6,6 @@ money = int(raw_input("How much money did he find? Please fill in a whole number
 celcius = int(raw_input("What is the weather in degrees Celcius? ")) #Number
 tax = int(raw_input("How much percent do you have to pay taxes?(0-100) ")) #Number
 
-
 #Ammount he found in US Dollar (1st mathematical operator)
 dollar = money * currency
 
@@ -31,7 +30,7 @@ bartenderDrink = bartender["Vanessa"]
 #Dice
 import random
 #Find out what number you threw
-dice = random.randrange(1,7)
+dice = random.randrange(1,7) #Dice randomg numbers 1,2,3,4,5,6
 
 if dice == 1 or dice == 6:
     diceMoney = "unfortunately he didn't win anything."
@@ -75,7 +74,6 @@ temperatureF = temperature(celcius)
     
 message = '''{opening} {day} with a temperature of {temperatureF} degrees Fahrenheit. The ducks were swimming and it looked like a nomal day at work for {name}. After work {name} was walking to his car and found a wallet with {money} Euro in it. The following day he went to the bank and converted his Euros into dollars with the rate of {currency} per Euro. {name} got {dollar} out of it and decided to go the casino and try his luck with the money he found. When he arrived at the casino he got greeted by his favorite bartender Vanessa with her favorite drink called: {bartenderDrink}. He was also the 10000th player to enter the casino that game and was allowed to throw a dice to see if he won a bonus. He threw the dice and {diceMoney}. He made his way to the {casinoGame} room and decided to try his luck there. Not too much luck but he left the casino with some profit. It was getting close to new year so he decided to go outside and see the fireworks. He looked at the clock and saw there was only 10 minutes remaining for New year. He kept looking down at his watch counting down. '''
 messageFormatted = message.format(**locals())
-
 
 print messageFormatted
 for countDown in reversed([0,1,2,3,4,5,6,7,9,10]): # Loop reversing the countdown till new year
