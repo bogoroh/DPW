@@ -52,7 +52,7 @@ def bankBalance():
 bankF =  bankBalance()
 
 #Figure out how much money he is left with after taxes
-if tax < 100:
+if tax < 100: #Mathematical Operator
     taxPercent = 0.45 # you pay 55% of taxes
 elif tax < 60:
     taxPercent = 0.50 # you pay 50% of taxes
@@ -67,7 +67,7 @@ netto = bankF * taxPercent #Money he is left with after taxes
 #Second function
 def temperature(celcius):
     fahrenheit = 9.0 / 5.0 * celcius + 32
-    return fahrenheit
+    return fahrenheit #Number in fahrenheit
 
 # Variable for the temperature converter
 temperatureF = temperature(celcius)
