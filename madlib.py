@@ -75,7 +75,7 @@ messageFormatted = message.format(**locals())
 
 print messageFormatted
 for countDown in reversed([0,1,2,3,4,5,6,7,9,10]): # Loop reversing the countdown in the array till new year 
-    timeNewYear = countDown, "Minutes left till new year"
+    timeNewYear = str(countDown) +  " " +"Minutes left till new year"
     print timeNewYear # countdown timer till new year
     if countDown == 0:
         newYear = "Happy new year !!!"
