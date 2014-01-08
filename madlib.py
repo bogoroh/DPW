@@ -6,7 +6,7 @@ money = int(raw_input("How much money did he find? Please fill in a whole number
 celcius = int(raw_input("What is the weather in degrees Celcius? ")) #Number
 tax = int(raw_input("How much percent do you have to pay taxes?(0-100) ")) #Number
 
-#Ammount he found in US Dollar (1st mathematical operator)
+#Amount he found in US Dollar (1st mathematical operator)
 dollar = money * currency
 
 #If statement for the opening sentence to check if it's sunny or not
@@ -18,21 +18,19 @@ else:
 #Casino Game
 casinoGames = ["poker","roulette","blackjack","slots","craps"]
 import random
-#Find out what game we are playing
-gameIndex = random.randrange(0,5)
-#Hold the string for the casinoGames
-casinoGame = casinoGames[gameIndex]
+gameIndex = random.randrange(0,5)#Find out what game we are playing 
+casinoGame = casinoGames[gameIndex] #Hold the string for the casinoGames
 
 #Bartender 
 bartender = {"Vanessa":"1800 Silver Dog","Britney":"Abbot's Dream","Jessica":"Apple Daiquiri","Nicole":"Bangkok Bomb"}
-bartenderDrink = bartender["Vanessa"]
+bartenderDrink = bartender["Vanessa"] #This will call the value
 
 #Dice
 import random
 #Find out what number you threw
 dice = random.randrange(1,7) #Dice randomg numbers 1,2,3,4,5,6
 
-if dice == 1 or dice == 6:
+if dice == 1 or dice == 6: #Assignment operators
     diceMoney = "unfortunately he didn't win anything."
 elif dice == 2:
     diceMoney = "he won 200$"
@@ -66,7 +64,7 @@ netto = bankF * taxPercent #Money he is left with after taxes
 
 #Second function
 def temperature(celcius):
-    fahrenheit = 9.0 / 5.0 * celcius + 32 # Mathematical operator
+    fahrenheit = 9.0 / 5.0 * celcius + 32 # Mathematical operator 
     return fahrenheit #Number in fahrenheit
 
 # Variable for the temperature converter
