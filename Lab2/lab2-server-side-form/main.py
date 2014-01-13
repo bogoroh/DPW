@@ -11,12 +11,12 @@ class MainHandler(webapp2.RequestHandler):
         
         #if there is a URL variable then print this
         if self.request.GET:
-        	self.response.write("Your login is" + " " + self.request.GET["login"])
+        	self.response.write("Thank you for your vote" + " " + self.request.GET["fName"] + " " + self.request.GET["lName"] +"(" + self.request.GET["sex"] + ")" + ", Born on " + self.request.GET["bday"] + "th" + " of " + self.request.GET["bmonth"] + " " + self.request.GET["byear"] + ". You have voted for the following members:" + self.request.GET["member"] )
         
         form = '''
         <form method="GET" action="">
-        	First name: <input type="text" name="fName" />
-        	Last Name:<input type="text" name="lName" />
+        	<label for="fName">First name:</label> <input type="text" name="fName" id="fName" />
+        	<label for="lName">Last name:</label><input type="text" name="lName" id="lName"/>
 			<select name="bday">
 				<option value="na">Day</option>
 				<option value="1">1</option>
@@ -104,15 +104,31 @@ class MainHandler(webapp2.RequestHandler):
 				<option value="1976">1976</option>
 				<option value="1975">1975</option>
 			</select> 
-        	<input type="text" name="login" />
-        	Sex:<input type="radio" name="sex" value="male" />
-        	<input type="radio" name="sex" value="female" />
-        	<input type="checkbox" name="member" value="mTaatgen">
-        	<input type="checkbox" name="member" value="aKluba">
-        	<input type="checkbox" name="member" value="jDoe">
-        	<input type="checkbox" name="member" value="jParsey">
-        	<input type="checkbox" name="member" value="tHaks">
-        	<input type="checkbox" name="member" value="gKetil">
+			<input type="radio" name="sex" value="male" id="male">
+			<label for="male">Male</label>
+			<input type="radio" name="sex" value="female" id="female">
+			<label for="female">Female</label> 
+        	
+        	<label for="member">Select your members of the parlement(Up to 3 members)</label>
+        	
+        	<input type="checkbox" id="mTaatgen" name="member" value="Mike Taatgen">
+        	<label for="mTaatgen">Mike Taatgen</label>
+        	
+        	<input type="checkbox" id="aKluba" name="member" value="Anthony Kluba">
+        	<label for="aKluba">Anthony Kluba</label>
+        	
+        	<input type="checkbox" id="jDoe" name="member" value="John Doe">
+        	<label for="jDoe">John Doe</label>
+        	
+        	<input type="checkbox" id="jParsey" name="member" value="Jake Parsey">
+        	<label for="jParsey">Jake Parsey</label>
+        	
+        	<input type="checkbox" id="tHaks" name="member" value="Tim Haks">
+        	<label for="tHaks">Tim Haks</label>
+        	
+        	<input type="checkbox" id="gKetil" name="member" value="Guan Ketil">
+        	<label for="gKetil">Guan Ketil</label>
+        	
         	<input type="submit" value="submit" />
         </form>
         '''
