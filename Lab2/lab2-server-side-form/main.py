@@ -1,3 +1,8 @@
+# Mike Taatgen
+# 01/13/2014
+# Form Lab
+# DPW
+
 import webapp2
 #from file import class
 from library import Page
@@ -11,7 +16,9 @@ class MainHandler(webapp2.RequestHandler):
         
         #if there is a URL variable then print this
         if self.request.GET:
-        	self.response.write("Thank you for your vote" + " " + self.request.GET["fName"] + " " + self.request.GET["lName"] +"(" + self.request.GET["sex"] + ")" + ", Born on " + self.request.GET["bday"] + "th" + " of " + self.request.GET["bmonth"] + " " + self.request.GET["byear"] + ". You have voted for the following members:" + self.request.GET["member"] )
+	        myList = self.request.get_all("member") #get_all makes them a list 
+	        myString = ",".join(myList ) # seperates the list with commas so that you can put it inside the write function function as a string
+        	self.response.write("Thank you for your vote" + " " + self.request.GET["fName"] + " " + self.request.GET["lName"] +"(" + self.request.GET["sex"] + ")" + ", Born on " + self.request.GET["bday"] + "th" + " of " + self.request.GET["bmonth"] + " " + self.request.GET["byear"] + ". You have voted for the following members:" +myString )
         
         form = '''
         <form method="GET" action="">
