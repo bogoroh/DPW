@@ -130,8 +130,9 @@ class Page():
     </body>
 </html>'''
 	
-	def open(self):
-		return self.__header
+	def head(self, title):
+		header = self.__header.format(**locals())
+		return header
 		
 	def close(self):
 		return self.__closer
