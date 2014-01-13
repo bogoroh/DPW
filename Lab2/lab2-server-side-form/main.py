@@ -9,10 +9,10 @@ from library import Page
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        title = "Welcome voter!"
+        title = "Welcome"
         page = Page() # Creates an instance of the imported class page
         #p = page.open() + "Welcome, Hero!" +  page.close()
-        self.response.write(page.head(title))
+        self.response.write(page.open())
         
         #if there is a URL variable then print this
         if self.request.GET:
