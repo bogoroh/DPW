@@ -9,7 +9,7 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
     	page = Page() # creates an instance of the Page function which is defined at library.py
     	title = "Welcome to the calculator"
-    	self.response.write(page.head()) # Creates the HTML attributes
+    	self.response.write(page.head(title)) # Creates the HTML attributes
 		
 		mike = Person(5555) # Password for his/her voicemail
 		mike.name = "Mike Taatgen" # Name of the user
@@ -22,13 +22,13 @@ class MainHandler(webapp2.RequestHandler):
 		anthony.text = 25 #Amount of text send
 		anthony.minutes = 325 # Amount of minutes talked on the phone
 		anthony.internet = 2.2 # Amount of GB used for data
-
+		
 		nate = Person(1821) # Password for his/her voicemail
 		nate.name = "Nathan Dickison" # Name of the user
 		nate.text = 75 #Amount of text send
 		nate.minutes = 290 # Amount of minutes talked on the phone
 		nate.internet = 3.2 # Amount of GB used for data
-
+		
 		jairo = Person(8371) # Password for his/her voicemail
 		jairo.name = "Jairo Jurado" # Name of the user
 		jairo.text = 25 #Amount of text send
@@ -40,16 +40,15 @@ class MainHandler(webapp2.RequestHandler):
 		rebecca.text = 49 #Amount of text send
 		rebecca.minutes = 280 # Amount of minutes talked on the phone
 		rebecca.internet = 4 # Amount of GB used for data
-
 		
-		players = [mike,anthony,nate,jairo,rebecca]	
+		players = [mike,anthony,nate,jairo,rebecca]	#array with all the players
 		
 		#self.response.write(heroes[1].name)
 		for h in players:
 			self.response.write("<div>" + h.name + " -- "   + "</div>" )
 			self.response.write(self.html(players[0]))
 		
-			self.response.write(page.close())
+		self.response.write(page.close())
 
 	def html(self,player): 
 		total = (player.text * .25) + (player.minutes * 0.04) + (player.internet * 8.5)
