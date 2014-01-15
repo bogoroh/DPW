@@ -3,6 +3,8 @@
 # DPW
 
 import webapp2
+from library import Page
+
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -46,7 +48,7 @@ class MainHandler(webapp2.RequestHandler):
 		for h in players:
 			self.response.write("<div>" + h.name + " -- "   + "</div>" )
 			
-		self.response.write(self.html(players[0]))
+			self.response.write(self.html(players[0]))
 				
 		def html(self,player): 
 			total = (player.text * .25) + (player.minutes * 0.04) + (player.internet * 8.5)
