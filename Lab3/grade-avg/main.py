@@ -5,7 +5,6 @@
 import webapp2
 from library import Page
 
-
 class MainHandler(webapp2.RequestHandler):
     def get(self):
     	page = Page() # creates an instance of the Page function which is defined at library.py
@@ -48,34 +47,35 @@ class MainHandler(webapp2.RequestHandler):
 		#self.response.write(heroes[1].name)
 		for h in players:
 			self.response.write("<div>" + h.name + " -- "   + "</div>" )
-			
 			self.response.write(self.html(players[0]))
-				
-		def html(self,player): 
-			total = (player.text * .25) + (player.minutes * 0.04) + (player.internet * 8.5)
-			code = '''
-			<h1>{player.name}</h1>
-			<div>
-				<p>
-					<h2>Amount of texts</h2>
-					<span>{player.text} Texts</span>
-				</p>
-				<p>
-					<h2>Amount of minutes talked</h2>
-					<span>{player.minutes} Minutes</span>
-				</p>
-				<p>
-					<h2>Amount of GB used for data</h2>
-					<span>{player.internet} GB</span>
-				</p
-				<p>
-					<h2>Monthly fee</h2>
-					<span>{total}$</span>
-				</p>
-			</div>
-			'''	
-			code = code.format(**locals())
-			return code	
+		
+		self.response.write(page.close())
+
+	def html(self,player): 
+		total = (player.text * .25) + (player.minutes * 0.04) + (player.internet * 8.5)
+		code = '''
+		<h1>{player.name}</h1>
+		<div>
+			<p>
+				<h2>Amount of texts</h2>
+				<span>{player.text} Texts</span>
+			</p>
+			<p>
+				<h2>Amount of minutes talked</h2>
+				<span>{player.minutes} Minutes</span>
+			</p>
+			<p>
+				<h2>Amount of GB used for data</h2>
+				<span>{player.internet} GB</span>
+			</p
+			<p>
+				<h2>Monthly fee</h2>
+				<span>{total}$</span>
+			</p>
+		</div>
+		'''	
+		code = code.format(**locals())
+		return code	
 		
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
