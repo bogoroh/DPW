@@ -9,13 +9,13 @@ class Page():
     <body>
        '''   
        
- 	self.__closer = '''
+	 	self.__closer = '''
     </body>
 </html>'''
 	
-		def head(self, title):
-			header = self.__header.format(**locals())
-			return header
-			
-		def close(self):
-			return self.__closer
+	def head(self, title):
+		header = self.__header.format(**locals())
+		return header
+		
+	def close(self):
+		return self.__closer
