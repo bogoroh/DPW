@@ -37,10 +37,11 @@ class MainHandler(webapp2.RequestHandler):
 		rebecca.internet = 4 # Amount of GB used for data
 
 		
-		players = [mike,anthony,nate,jairo,rebecca]
+		players = [mike,anthony,nate,jairo,rebecca]	
+		
 		#self.response.write(heroes[1].name)
 		for h in players:
-			self.response.write("<div>" + h.name + " -- "  + "</div>")
+			self.response.write("<div>" + h.name + " -- "   + "</div>")
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
@@ -52,10 +53,17 @@ class Person(object):
 		self.name = ""
 		self.text = 0
 		self.minutes = 0
-		self.internet = 0
+		self.__internet = 0
 		self.__password = pin
 		
-		
+	#GETTER FUNCTION	
 	@property 
 	def password(self):
 		return self.__password	
+		
+	# SETTER FUNCTION	
+	#setters can do more!
+	
+	@password.setter
+	def internet(self,value):
+		self.__password = value
