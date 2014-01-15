@@ -9,7 +9,7 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
     	page = Page() # creates an instance of the Page function which is defined at library.py
     	title = "Welcome to the calculator"
-		self.response.write(page.head()) # Creates the HTML attributes
+    	self.response.write(page.head()) # Creates the HTML attributes
 		
 		mike = Person(5555) # Password for his/her voicemail
 		mike.name = "Mike Taatgen" # Name of the user
@@ -49,7 +49,7 @@ class MainHandler(webapp2.RequestHandler):
 			self.response.write("<div>" + h.name + " -- "   + "</div>" )
 			self.response.write(self.html(players[0]))
 		
-		self.response.write(page.close())
+			self.response.write(page.close())
 
 	def html(self,player): 
 		total = (player.text * .25) + (player.minutes * 0.04) + (player.internet * 8.5)
