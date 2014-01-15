@@ -9,6 +9,7 @@ from library import Page
 class MainHandler(webapp2.RequestHandler):
     def get(self):
     	page = Page() # creates an instance of the Page function which is defined at library.py
+    	title = "Welcome to the calculator"
 		self.response.write(page.head()) # Creates the HTML attributes
 		
 		mike = Person(5555) # Password for his/her voicemail
