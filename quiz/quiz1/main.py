@@ -26,13 +26,12 @@ def calcArea (w,h):
 		return areaMessage
 
 def countDown (b):
-	while (b > 0):
-		b = int(b)
-		stringb = str(b)
-    	message = stringb + " Bottles of Beer on the Wall, " + stringb +  " Bottles of Beer.. take one down and pass it around. Now you have " + str(b-1) + " bottles of beer on the wall!"
-    	b = b - 1 
-    	print message
-    	print "----------------------------------------------"
-    	if b == 1:
-    		print "1 bottle of beer on the wall, 1 bottle of beer." +  "Bottles of Beer.. take one down and pass it around. Now you are out of beer and kind of drunk !"
-    		print "BURP, BURP, HICK, HICK"
+	bottles = int(b)
+	for i in range(bottles, 0, -1):
+		if i == 1:
+			print "1 Bottle of beer on the wall, 1 Bottle of beer." +  "Bottles of Beer.. take one down and pass it around. Now you are out of beer and kind of drunk !"
+			print "BURP, BURP, HICK, HICK"
+		else:
+			message = str(i) + " Bottles of Beer on the Wall, " + str(i) +  " Bottles of Beer.. take one down and pass it around. Now you have " + str(i-1) + " bottles of beer on the wall!"
+			print message
+			print "----------------------------------------------"
