@@ -35,6 +35,20 @@ class BlackDolphins(AbstractAnimals):
 # LeopardShark class that gets all the attributes from the AbstractAnimals class
 class LeopardShark(AbstractAnimals):
 	def __init__(self):
+		super(LeopardShark,self).__init__() #calling AbstractAnimals's init function
+		self.Phylum = "Chordata"
+		self.Class = "Chondrichthyes"
+		self.Order = "Carcharhiniformes"
+		self.Family = "Carcharhinidae"
+		self.Genus = "Galeocerdo"
+		self.Url = ""
+		self.Alifespan = "The average lifespan of tiger sharks in the wild is 27 years, though some may live to 50 years of age. "
+		self.Habitat = "Tiger sharks are a saltwater species. Although they prefer the sea grass ecosystems of the costal areas, they occasionally inhabit other areas due to prey availability. Tiger sharks spend approximately 36 % of their time in shallow coastlne habitats (Heithaus et al., 2002), generally at depths of 2.5 to 145 m. This species, however, has been documented several kilometers from the shallow areas and at depths up to 350 m. Females are observed in shallow areas more often than males. Tiger sharks have also been documented in river estuaries and harbors"
+		self.Geolocation = "Tiger sharks are found in many subtropical and tropical waters, primarily from 45°N to 32°S. Tiger sharks have been sighted from the eastern coast of North America to the eastern coast of Brazil. This includes the coasts of southern North America, Mexico, and Latin America along the Gulf of Mexico. Tiger sharks also populate the coasts of China, India, Africa, Japan, and many islands of the Pacific Ocean."
+
+# Blue Marlin class that gets all the attributes from the AbstractAnimals class
+class BlueMarlin(AbstractAnimals):
+	def __init__(self):
 		super(BlackDolphins,self).__init__() #calling AbstractAnimals's init function
 		self.Phylum = "Chordata"
 		self.Class = "Chondrichthyes"
@@ -44,4 +58,4 @@ class LeopardShark(AbstractAnimals):
 		self.Url = ""
 		self.Alifespan = "The average lifespan of tiger sharks in the wild is 27 years, though some may live to 50 years of age. "
 		self.Habitat = "Tiger sharks are a saltwater species. Although they prefer the sea grass ecosystems of the costal areas, they occasionally inhabit other areas due to prey availability. Tiger sharks spend approximately 36 % of their time in shallow coastlne habitats (Heithaus et al., 2002), generally at depths of 2.5 to 145 m. This species, however, has been documented several kilometers from the shallow areas and at depths up to 350 m. Females are observed in shallow areas more often than males. Tiger sharks have also been documented in river estuaries and harbors"
-		self.Geolocation = "Tiger sharks are found in many subtropical and tropical waters, primarily from 45°N to 32°S. Tiger sharks have been sighted from the eastern coast of North America to the eastern coast of Brazil. This includes the coasts of southern North America, Mexico, and Latin America along the Gulf of Mexico. Tiger sharks also populate the coasts of China, India, Africa, Japan, and many islands of the Pacific Ocean."		
+		self.Geolocation = "Tiger sharks are found in many subtropical and tropical waters, primarily from 45°N to 32°S. Tiger sharks have been sighted from the eastern coast of North America to the eastern coast of Brazil. This includes the coasts of southern North America, Mexico, and Latin America along the Gulf of Mexico. Tiger sharks also populate the coasts of China, India, Africa, Japan, and many islands of the Pacific Ocean."				
