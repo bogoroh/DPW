@@ -43,8 +43,8 @@ class MainHandler(webapp2.RequestHandler):
 		players = [mike,anthony,nate,jairo,rebecca]	#array with all the players
 		
 		#self.response.write(heroes[1].name)
-		for h in players:
-			self.response.write("<div>" + h.name + " -- "   + "</div>" )
+		#for h in players:
+			#self.response.write("<div>" + h.name + " -- "   + "</div>" )
 		
 		self.response.write(page.head(title)) # Creates the HTML attributes
 		self.response.write(self.html(players[0]))
@@ -55,24 +55,23 @@ class MainHandler(webapp2.RequestHandler):
 		code = '''
 		<h1>{player.name}</h1>
 		<div>
-			<p>
+			<div>
 				<h2>Amount of texts</h2>
 				<span>{player.text} Texts</span>
-			</p>
-			<p>
+			</div>
+			<div>
 				<h2>Amount of minutes talked</h2>
 				<span>{player.minutes} Minutes</span>
-			</p>
-			<p>
+			</div>
+			<div>
 				<h2>Amount of GB used for data</h2>
 				<span>{player.internet} GB</span>
-			</p
-			<p>
+			</div>
+			<div>
 				<h2>Monthly fee</h2>
 				<span>{total}$</span>
-			</p>
-		</div>
-		'''	
+			</div>
+		</div>'''	
 		code = code.format(**locals())
 		return code	
 		
