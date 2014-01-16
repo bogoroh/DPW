@@ -6,11 +6,10 @@ import webapp2
 from library import Page
 
 class MainHandler(webapp2.RequestHandler):
-    def get(self):
-    	page = Page() # creates an instance of the Page function which is defined at library.py
-    	title = "Welcome to the calculator"
-    	self.response.write(page.head(title)) # Creates the HTML attributes
-		
+	def get(self):
+		page = Page() # creates an instance of the Page function which is defined at library.py
+		title = "Welcome to the calculator"
+    	
 		mike = Person(5555) # Password for his/her voicemail
 		mike.name = "Mike Taatgen" # Name of the user
 		mike.text = 45 #Amount of text send
@@ -46,8 +45,9 @@ class MainHandler(webapp2.RequestHandler):
 		#self.response.write(heroes[1].name)
 		for h in players:
 			self.response.write("<div>" + h.name + " -- "   + "</div>" )
-			self.response.write(self.html(players[0]))
 		
+		self.response.write(page.head(title)) # Creates the HTML attributes
+		self.response.write(self.html(players[0]))
 		self.response.write(page.close())
 
 	def html(self,player): 
