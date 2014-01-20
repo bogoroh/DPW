@@ -62,23 +62,23 @@ class MainHandler(webapp2.RequestHandler):
 		self.response.write(page.head())
 		if self.request.GET:
 			indexAnimal = int(self.request.GET['animal'])
-			self.response.write(page.tmp(animals[indexAnimal]))
+			self.response.write(page.content(animals[indexAnimal]))
 		self.response.write(page.nav())
 		self.response.write(page.foot())
 		
 class AbstractAnimals(object):
     def __init__(self):
-        self.Name = ''
-        self.Phylum = ''
-        self.Class = ''
-        self.Order = ''
-        self.Family = ''
-        self.Genus = ''
-        self.Url = ''
-        self.Alifespan = ''
-        self.Habitat = ''
-        self.Geolocation = ''
-        self.Sound = ''
+        self.name = ''
+        self.phylum = ''
+        self.cclass = ''
+        self.order = ''
+        self.family = ''
+        self.genus = ''
+        self.url = ''
+        self.alifespan = ''
+        self.habitat = ''
+        self.geolocation = ''
+        self.sound = ''
                 
 class Sound(AbstractAnimals):
     def __init__(self):
