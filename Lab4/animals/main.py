@@ -66,7 +66,7 @@ class MainHandler(webapp2.RequestHandler):
 		self.response.write(page.nav())
 		self.response.write(page.foot())
 		
-class AbstractAnimals(object):
+class AbstractAnimals(object): #Sets the orginal class where the smaller classes take note from
     def __init__(self):
         self.name = ''
         self.phylum = ''
@@ -80,13 +80,9 @@ class AbstractAnimals(object):
         self.geolocation = ''
         self.sound = ''
                 
-class Sound(AbstractAnimals):
+class Sound(AbstractAnimals): # make a
     def __init__(self):
         super(Sound, self).__init__()
-        
-        self.__soundText = '''
-        <h2 >The {self.name} says {self.sound}</h2>
-    '''
         
     @property
     def soundPass(self):

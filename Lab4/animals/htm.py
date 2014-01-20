@@ -14,7 +14,7 @@ class Page():
 </head>
     <body>
         <div id="wrapper">'''
-        self.__form='''
+        self.__nav='''
             <nav>
                 <a href='/?animal=0'><button>Black Dolphins</button></a>
                 <a href='/?animal=1'><button>Leopard Shark</button></a>
@@ -73,7 +73,7 @@ class Page():
         return self.__header
 
     def nav(self):
-        return self.__form
+        return self.__nav
         
     def content(self,obj):
         content = self.__content.format(**locals())
