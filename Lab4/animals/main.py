@@ -22,7 +22,7 @@ class MainHandler(webapp2.RequestHandler):
 		blackDolphins.url = "http://www.hdwpapers.com/walls/black_dolphin_wallpaper_2-normal5.4.jpg"
 		blackDolphins.alifespan = "Up to 20 years"
 		blackDolphins.habitat = "On Chile's convoluted coastline, Chilean dolphins prefer to live near areas of particularly strong tidal flow above a steep dropping shelf. They are most commonly found in channels and open coasts and bays. They are also found in areas of tide rips at the mouth of fjords. They prefer cold, shallow water at depths of 3 to 15 m. They may also enter rivers and estuaries and can be seen as far as 5 kilometers upstream."
-		blackDolphins.geolocation = "Chilean dolphins live in the coastal waters of Chile, ranging from near Valparaiso (33°S) to south of Navarino Island (55°15'S) and as far south as Tierra del Fuego."
+		blackDolphins.geolocation = "Chilean dolphins live in the coastal waters of Chile, ranging from near Valparaiso (33&deg;S) to south of Navarino Island (55&deg;15'S) and as far south as Tierra del Fuego."
 		blackDolphins.sound = "Wieuw Wieuw"
 		blackDolphins.update()
 
@@ -37,7 +37,7 @@ class MainHandler(webapp2.RequestHandler):
 		leopardShark.url = "http://www.elasmodiver.com/Sharkive%20images/Leopard_Shark224.jpg"
 		leopardShark.alifespan = "The average lifespan of tiger sharks in the wild is 27 years, though some may live to 50 years of age. "
 		leopardShark.habitat = "Tiger sharks are a saltwater species. Although they prefer the sea grass ecosystems of the costal areas, they occasionally inhabit other areas due to prey availability. Tiger sharks spend approximately 36&#37; of their time in shallow coastlne habitats (Heithaus et al., 2002), generally at depths of 2.5 to 145 m. This species, however, has been documented several kilometers from the shallow areas and at depths up to 350 m. Females are observed in shallow areas more often than males. Tiger sharks have also been documented in river estuaries and harbors"
-		leopardShark.geolocation = "Tiger sharks are found in many subtropical and tropical waters, primarily from 45°N to 32°S. Tiger sharks have been sighted from the eastern coast of North America to the eastern coast of Brazil. This includes the coasts of southern North America, Mexico, and Latin America along the Gulf of Mexico. Tiger sharks also populate the coasts of China, India, Africa, Japan, and many islands of the Pacific Ocean."
+		leopardShark.geolocation = "Tiger sharks are found in many subtropical and tropical waters, primarily from 45&deg;N to 32&deg;S. Tiger sharks have been sighted from the eastern coast of North America to the eastern coast of Brazil. This includes the coasts of southern North America, Mexico, and Latin America along the Gulf of Mexico. Tiger sharks also populate the coasts of China, India, Africa, Japan, and many islands of the Pacific Ocean."
 		leopardShark.sound = "Wrah Wrah"
 		leopardShark.update()
 
