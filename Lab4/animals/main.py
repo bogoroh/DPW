@@ -61,10 +61,10 @@ class MainHandler(webapp2.RequestHandler):
 		
 		self.response.write(page.head())
 		if self.request.GET:
-			indexAnimal = int(self.request.GET['animal'])
-			self.response.write(page.content(animals[indexAnimal]))
-		self.response.write(page.nav())
-		self.response.write(page.foot())
+			indexAnimal = int(self.request.GET['animal']) #Grabs the index number out of the URL on the top of the browser
+			self.response.write(page.content(animals[indexAnimal])) #fills the templating in with the index number 
+		self.response.write(page.nav()) #Buttons on the page
+		self.response.write(page.foot()) # Footer of the page. Currently blank
 		
 class AbstractAnimals(object): #Sets the orginal class where the smaller classes take note from
     def __init__(self):
@@ -80,19 +80,17 @@ class AbstractAnimals(object): #Sets the orginal class where the smaller classes
         self.geolocation = ''
         self.sound = ''
                 
-class Sound(AbstractAnimals): # make a
+class Sound(AbstractAnimals): # makes a class Sound that is part of the Abstract Animal class
     def __init__(self):
-        super(Sound, self).__init__()
+		super(Sound, self).__init__()
+		self.__soundText = self.sound
         
-    @property
-    def soundPass(self):
-        return self.__soundText
-        
-    def update(self):
-        self.__soundText = self.__soundText.format(**locals())
-        
+    @property #GETTER for the sound
+    def soundGet(self):
+		return self.__soundText
 
-
+    def update(self): #Update function
+		self.__soundText = self.__soundText.format(**locals())    
 		
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
