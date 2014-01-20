@@ -59,7 +59,7 @@ class Page():
                 </div>
                 <div>
                     <h3>I say:</h3>
-                    <p>{obj.soundGet}</p>
+                    <p>{obj.sound}</p>
                 </div>
     '''
         
