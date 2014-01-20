@@ -65,7 +65,21 @@ class MainHandler(webapp2.RequestHandler):
 			self.response.write(page.tmp(animals[indexAnimal]))
 		self.response.write(page.nav())
 		self.response.write(page.foot())
-        
+		
+class AbstractAnimals(object):
+    def __init__(self):
+        self.Name = ''
+        self.Phylum = ''
+        self.Class = ''
+        self.Order = ''
+        self.Family = ''
+        self.Genus = ''
+        self.Url = ''
+        self.Alifespan = ''
+        self.Habitat = ''
+        self.Geolocation = ''
+        self.Sound = ''
+                
 class Sound(AbstractAnimals):
     def __init__(self):
         super(Sound, self).__init__()
@@ -81,20 +95,7 @@ class Sound(AbstractAnimals):
     def update(self):
         self.__soundText = self.__soundText.format(**locals())
         
-		
-class AbstractAnimals(object):
-    def __init__(self):
-        self.Name = ''
-        self.Phylum = ''
-        self.Class = ''
-        self.Order = ''
-        self.Family = ''
-        self.Genus = ''
-        self.Url = ''
-        self.Alifespan = ''
-        self.Habitat = ''
-        self.Geolocation = ''
-        self.Sound = ''
+
 
 		
 app = webapp2.WSGIApplication([
