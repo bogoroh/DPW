@@ -74,6 +74,10 @@ class Page():
 
     def nav(self):
         return self.__form
+        
+	def content(self,obj):
+	    content = self.__content.format(**locals())
+        return content    
 
     def foot(self):
 	    return self.__foot
