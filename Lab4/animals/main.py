@@ -4,9 +4,13 @@
 # Animals
 
 import webapp2
+from htm import Page
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
+    
+    	page = Page()
+    	
         # BlackDolphins class that gets all the attributes from the AbstractAnimals class
 		blackDolphins = Sound()
 		blackDolphins.name = "Black Dolphins"
