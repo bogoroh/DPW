@@ -18,6 +18,7 @@ app = webapp2.WSGIApplication([
 class BlackDolphins(AbstractAnimals):
 	def __init__(self):
 		super(BlackDolphins,self).__init__() #calling AbstractAnimals's init function
+		self.Name = "Black Dolphins"
 		self.Phylum = "Chordata"
 		self.Class = "Mammalia"
 		self.Order = "Cetacea"
@@ -34,6 +35,7 @@ class BlackDolphins(AbstractAnimals):
 class LeopardShark(AbstractAnimals):
 	def __init__(self):
 		super(LeopardShark,self).__init__() #calling AbstractAnimals's init function
+		self.Name = "Leopard Shark"
 		self.Phylum = "Chordata"
 		self.Class = "Chondrichthyes"
 		self.Order = "Carcharhiniformes"
@@ -49,6 +51,7 @@ class LeopardShark(AbstractAnimals):
 class BlueMarlin(AbstractAnimals):
 	def __init__(self):
 		super(BlackDolphins,self).__init__() #calling AbstractAnimals's init function
+		self.Name = "Blue Marlin"
 		self.Phylum = "Chordata"
 		self.Class = "Actinopterygii"
 		self.Order = "Perciformes"
@@ -82,7 +85,7 @@ class Sound(AbstractAnimals):
 		
 class AbstractAnimals(object):
     def __init__(self):
-        self.name = ''
+        self.Name = ''
         self.Phylum = ''
         self.Class = ''
         self.Order = ''
