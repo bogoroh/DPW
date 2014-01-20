@@ -62,6 +62,23 @@ class BlueMarlin(AbstractAnimals):
 		
 #Array with all the animals in it
 animals = [BlackDolphins,LeopardShark,BlueMarlin]
+
+        
+class Sound(AbstractAnimals):
+    def __init__(self):
+        super(Sound, self).__init__()
+        
+        self.__soundText = '''
+        <h2 >The {self.name} says {self.sound}</h2>
+    '''
+        
+    @property
+    def soundPass(self):
+        return self.__soundText
+        
+    def update(self):
+        self.__soundText = self.__soundText.format(**locals())
+        
 		
 class AbstractAnimals(object):
     def __init__(self):
