@@ -1,7 +1,7 @@
 # Mike Taatgen
-# 01-15-14
 # DPW
-# Animals
+# 01-20-14
+# Animals assignement
 
 import webapp2
 from htm import Page

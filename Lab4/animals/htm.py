@@ -1,3 +1,8 @@
+# Mike Taatgen
+# DPW
+# 01-20-14
+# Animals assignement
+
 class Page():
     def __init__(self):
             self.__header = '''
