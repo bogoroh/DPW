@@ -20,3 +20,18 @@ class Page():
                         <a href='/?animal=1'><button>Leopard Shark</button></a>
                         <a href='/?animal=2'><button>Blue Marlin</button></a>
                 </nav>'''
+                
+            self.__foot= '''
+                </div>
+        </body>
+</html>'''
+
+#Returners
+    def head(self):
+        return self.__header
+
+    def nav(self):
+        return self.__form
+
+    def foot(self):
+	    return self.__foot
