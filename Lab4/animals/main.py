@@ -59,6 +59,13 @@ class MainHandler(webapp2.RequestHandler):
 		
 		#Array with all the animals in it
 		animals = [blackDolphins,leopardShark,blueMarlin]
+		
+		self.response.write(page.head())
+	        if self.request.GET:
+                indexAnimal = int(self.request.GET['animal'])
+                self.response.write(page.tmp(animals[indexAnimal]))
+	        self.response.write(page.nav())
+	        self.response.write(page.foot())
         
 class Sound(AbstractAnimals):
     def __init__(self):
