@@ -8,10 +8,10 @@ from htm import Page
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-    
-    	page = Page()
-    	
-        # BlackDolphins class that gets all the attributes from the AbstractAnimals class
+
+		page = Page()
+
+		# BlackDolphins class that gets all the attributes from the AbstractAnimals class
 		blackDolphins = Sound()
 		blackDolphins.name = "Black Dolphins"
 		blackDolphins.phylum = "Chordata"
@@ -26,8 +26,7 @@ class MainHandler(webapp2.RequestHandler):
 		blackDolphins.sound = "Wieuw Wieuw"
 		blackDolphins.update()
 
-
-# LeopardShark class that gets all the attributes from the AbstractAnimals class
+		# LeopardShark class that gets all the attributes from the AbstractAnimals class
 		leopardShark = Sound();
 		leopardShark.name = "Leopard Shark"
 		leopardShark.phylum = "Chordata"
@@ -42,7 +41,7 @@ class MainHandler(webapp2.RequestHandler):
 		leopardShark.sound = "Wrah Wrah"
 		leopardShark.update()
 
-# Blue Marlin class that gets all the attributes from the AbstractAnimals class
+		# Blue Marlin class that gets all the attributes from the AbstractAnimals class
 		blueMarlin = Sound()
 		blueMarlin.name = "Blue Marlin"
 		blueMarlin.phylum = "Chordata"
@@ -61,11 +60,11 @@ class MainHandler(webapp2.RequestHandler):
 		animals = [blackDolphins,leopardShark,blueMarlin]
 		
 		self.response.write(page.head())
-	        if self.request.GET:
-                indexAnimal = int(self.request.GET['animal'])
-                self.response.write(page.tmp(animals[indexAnimal]))
-	        self.response.write(page.nav())
-	        self.response.write(page.foot())
+		if self.request.GET:
+			indexAnimal = int(self.request.GET['animal'])
+			self.response.write(page.tmp(animals[indexAnimal]))
+		self.response.write(page.nav())
+		self.response.write(page.foot())
         
 class Sound(AbstractAnimals):
     def __init__(self):
