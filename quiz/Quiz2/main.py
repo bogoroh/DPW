@@ -34,4 +34,15 @@ class Land(object):
 class Island(Land):
 	def __init__(self):
 		super(Island, self).__init__()
-		
+		self._length = 0
+
+		def sea:
+			print("This island is located around the pacific ocean")
+	@property
+	def length(self):
+	    return self._length
+	@length.setter
+	def length(self, value):
+	    self._length = value
+	
+
