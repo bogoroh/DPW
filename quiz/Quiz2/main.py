@@ -31,5 +31,7 @@ class Land(object):
     def age(self, value):
         self._age = value
     
-class Island(Land)
-
+class Island(Land):
+	def __init__(self):
+		super(Island, self).__init__()
+		
