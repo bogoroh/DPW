@@ -8,9 +8,9 @@ class Land(object):
 		def populationCheck(self):
 			people = 7023442934239123 # Amount of people on land
 			rateIncrease = 4.5 # Rate increase of the amount of people since last year
-
-			return 		
-		def populationGrowth(c,p):
+			return people
+			return rateIncrease	
+		def populationGrowth(c,p): #Call it out for example: Land.populationGrowth(32432523523,2)
 			newPopulation = c * p
 			print newPopulation
 			return newPopulation
@@ -37,7 +37,12 @@ class Island(Land):
 		self._length = 0
 
 		def sea:
-			print("This island is located around the pacific ocean")
+			print("This island is located around the pacific ocean") #this will print out when you call it out like Island.sea()
+		def partOf:
+			family = "This island is part of the Netherlands" #this will print out when you call it out like Island.partOf()
+			print family
+			return family
+
 	@property
 	def length(self):
 	    return self._length
