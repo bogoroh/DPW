@@ -31,7 +31,6 @@ class Sport(object):
 		def PrintClassName(self):
 			print "We're now inside the Abstract Class called: 'Sport' "
 
-
 class Wakeboard(Sport):
 	def __init__(self):
 		super(Wakeboard, self).__init__()
@@ -39,6 +38,12 @@ class Wakeboard(Sport):
 		self.__inventory = 'Wakerope, Wakeboard, Boat'
 		self._location = 'Willemstad, Curacao'
 		self.__bestPlace = "Honolulu, Hawaii"
+		self.level = "Beginner"
+
+		def Surface(self):
+			print "This sport is played on the water"
+		def PrintClassName(self):
+			print "We're now inside the super class called: 'Wakeboard' "
 
 		@property
 		def age(self):
@@ -47,12 +52,10 @@ class Wakeboard(Sport):
 		@property
 		def inventory(self):
 		    return self.__inventory   
-	
 
-		def Surface(self):
-			print "This sport is played on the water"
-		def PrintClassName(self):
-			print "We're now inside the super class called: 'Wakeboard' "
+		@property
+		def bestplace(self):
+		    return self.__bestPlace  		
 
 class Snowboard(Sport):
 	def __init__(self):
@@ -61,6 +64,12 @@ class Snowboard(Sport):
 		self.__inventory = 'Snowboard, Snowboots, Snow , Mountain'
 		self._location = 'Vancoucer, BC'
 		self.__bestPlace = "Whistler Blackcomb"
+		self.level = "Double black diamond"
+
+		def Surface(self):
+			print "This sport is played on snow"
+		def PrintClassName(self):
+			print "We're now inside the super Class called: 'Snowboard' "
 
 		@property
 		def age(self):
@@ -68,9 +77,8 @@ class Snowboard(Sport):
 
 		@property
 		def inventory(self):
-		    return self.__inventory   
+		    return self.__inventory  
 
-		def Surface(self):
-			print "This sport is played on snow"
-		def PrintClassName(self):
-			print "We're now inside the super Class called: 'Snowboard' "
+		@property
+		def bestplace(self):
+		    return self.__bestPlace  		 
