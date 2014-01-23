@@ -38,11 +38,12 @@ class Wakeboard(Sport):
 		self.__age = 1840
 		self.__inventory = 'Wakerope, Wakeboard, Boat'
 		self._location = 'Willemstad, Curacao'
-		
+		self.__bestPlace = "Honolulu, Hawaii"
+
 		@property
 		def age(self):
 		    return self.__age
-		    		
+
 		@property
 		def inventory(self):
 		    return self.__inventory   
@@ -59,6 +60,7 @@ class Snowboard(Sport):
 		self.__age = 1960
 		self.__inventory = 'Snowboard, Snowboots, Snow , Mountain'
 		self._location = 'Vancoucer, BC'
+		self.__bestPlace = "Whistler Blackcomb"
 
 		@property
 		def age(self):
