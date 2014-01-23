@@ -11,3 +11,15 @@ class MainHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
+
+class Sport(object):
+	def __init__(self):
+		pass
+
+class Wakeboard(Sport):
+	def __init__(self):
+		super(Wakeboard, self).__init__()
+
+class Snowboard(Sport):
+	def __init__(self):
+		super(Snowboard, self).__init__()
