@@ -6,7 +6,7 @@
 import webapp2
 from HTMLLibrary import *
 import urllib2 #Needed for importing from URL's
-#from xml.dom import minidom #convert XML into an object
+from xml.dom import minidom #convert XML into an object
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -38,15 +38,23 @@ class MainHandler(webapp2.RequestHandler):
 		self.response.write(form.header + form.getForm + form.close)
 		if self.request.GET:
 			self.__station = self.request.GET['station']
-
-
 			openerURL = urllib2.build_opener() #magic to load request - creates framework to get url
 			result = openerURL.open(self.__req) # gets url and puts result in "result"
 			#print result
 			xmldoc = minidom.parse(result) #parse through string to get XML object 
 
-
-
+			content = '<br/>' 
+			FList = xmldoc.getElementsByTagName('RitNummer')
+			self.response.write(FList[0].firstChild.nodeValue)
+			#for l in FList:
+				#content += 'Trainnumber: ' + l.attributes["RitNummer"].value 
+				#content += 'Departure Time: ' + l.attributes["VertrekTijd"].value
+				#content += 'Final Destination: ' + l.attributes["EindBestemming"].value
+				#content += 'Traintype: ' + l.attributes["TreinSoort"].value
+				#content += 'Departure Railway: '  + l.attributes["VertrekSpoor"].value
+				#content += "<br/>"
+			#self.response.write(content)
+			
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
