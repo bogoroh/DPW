@@ -29,7 +29,7 @@ class MainHandler(webapp2.RequestHandler):
 		#requests and brings back page info
 		handler = urllib2.urlopen(self.__req)
 		#prints out to the page
-		self.response.write(handler.read())
+		#self.response.write(handler.read())
 
 		page = Page()
 		form_settings = [{"name":"station","type":"text","label":"Enter the abrevation of the station "},{"name":"submit","type":"submit","label":"Get departure times"}]
@@ -42,18 +42,21 @@ class MainHandler(webapp2.RequestHandler):
 			result = openerURL.open(self.__req) # gets url and puts result in "result"
 			#print result
 			xmldoc = minidom.parse(result) #parse through string to get XML object 
-
 			content = '<br/>' 
-			FList = xmldoc.getElementsByTagName('RitNummer')
-			self.response.write(FList[0].firstChild.nodeValue)
-			#for l in FList:
-				#content += 'Trainnumber: ' + l.attributes["RitNummer"].value 
-				#content += 'Departure Time: ' + l.attributes["VertrekTijd"].value
-				#content += 'Final Destination: ' + l.attributes["EindBestemming"].value
-				#content += 'Traintype: ' + l.attributes["TreinSoort"].value
-				#content += 'Departure Railway: '  + l.attributes["VertrekSpoor"].value
-				#content += "<br/>"
-			#self.response.write(content)
+			ARit = xmldoc.getElementsByTagName('RitNummer')
+			AVertrekTijd = xmldoc.getElementsByTagName('VertrekTijd')
+			AEind = xmldoc.getElementsByTagName('EindBestemming')
+			ATrein = xmldoc.getElementsByTagName('TreinSoort')
+			AVertrek = xmldoc.getElementsByTagName('VertrekSpoor')
+			self.response.write(AVertrek[0].firstChild.nodeValue)
+			for l,m,n,o,p in zip(ARit, AVertrekTijd,AEind,ATrein,AVertrek):
+				content += 'Trainnumber: ' + l.firstChild.nodeValue
+				content += 'Departure Time: ' + m.firstChild.nodeValue
+				content += 'Final Destination: ' + n.firstChild.nodeValue
+				content += 'Traintype: ' + o.firstChild.nodeValue
+				content += 'Departure Railway: '  + p.firstChild.nodeValue
+				content += "<br/>"
+			self.response.write(content)
 			
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
