@@ -26,10 +26,7 @@ class MainHandler(webapp2.RequestHandler):
 		#creates "openeer object for fetching page info"
 		self.__opener = urllib2.build_opener(auth_manager)
 		urllib2.install_opener(self.__opener)
-		#requests and brings back page info
 		handler = urllib2.urlopen(self.__req)
-		#prints out to the page
-		#self.response.write(handler.read())
 
 		page = Page()
 		form_settings = [{"name":"station","type":"text","label":"Enter the abrevation of the station "},{"name":"submit","type":"submit","label":"Get departure times"}]
@@ -47,7 +44,6 @@ class MainHandler(webapp2.RequestHandler):
 			AEind = xmldoc.getElementsByTagName('EindBestemming') # Saves all the final destination into an array  for that station
 			ATrein = xmldoc.getElementsByTagName('TreinSoort') # Saves all the Traintypes in an array for that station
 			AVertrek = xmldoc.getElementsByTagName('VertrekSpoor') #Saves all the Departure railways for that station into an array 
-			#self.response.write(AVertrek[0].firstChild.nodeValue)
 			for l,m,n,o,p in zip(ARit, AVertrekTijd,AEind,ATrein,AVertrek): # Makes it possible to loop throught multiple arrays
 				content += 'Trainnumber: ' + l.firstChild.nodeValue 
 				content += 'Departure Time: ' + m.firstChild.nodeValue
