@@ -1,6 +1,6 @@
 class Page(object):
 	def __init__(self):
-			self.title = "Main"
+			self.title = "NS - Help"
 			self.css = '<link rel="stylesheet" href="css/main.css" type="text/css" />'
 			self._header ='''<!DOCTYPE>
 <html>
@@ -8,10 +8,10 @@ class Page(object):
         <title>{self.title}</title>
         {self.css}
     </head>
-    <body>
+<body>
        '''   
 			self.__closer = '''
-    </body>
+</body>
 </html>'''
 	
 	@property

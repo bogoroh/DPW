@@ -47,7 +47,7 @@ class MainHandler(webapp2.RequestHandler):
 			AEind = xmldoc.getElementsByTagName('EindBestemming') # Saves all the final destination into an array  for that station
 			ATrein = xmldoc.getElementsByTagName('TreinSoort') # Saves all the Traintypes in an array for that station
 			AVertrek = xmldoc.getElementsByTagName('VertrekSpoor') #Saves all the Departure railways for that station into an array 
-			self.response.write(AVertrek[0].firstChild.nodeValue)
+			#self.response.write(AVertrek[0].firstChild.nodeValue)
 			for l,m,n,o,p in zip(ARit, AVertrekTijd,AEind,ATrein,AVertrek): # Makes it possible to loop throught multiple arrays
 				content += 'Trainnumber: ' + l.firstChild.nodeValue 
 				content += 'Departure Time: ' + m.firstChild.nodeValue
